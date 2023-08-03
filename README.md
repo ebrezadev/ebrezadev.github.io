@@ -1,0 +1,2 @@
+## Weatherstack API Example
+
