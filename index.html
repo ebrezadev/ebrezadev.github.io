@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>WeatherStack Example</title>
 </head>
+
 <body>
-	
+	<form action="http://api.weatherstack.com/current" method="GET">
+		<label for="key">Please enter your personal key </label>
+		<input type="password" type="text" name="access_key" value="" id="key" maxlength="100" required>
+		<input type="submit" value="Send">
+	</form>
+	<script src="./resources/script/main.js" defer></script>
 </body>
+
 </html>
