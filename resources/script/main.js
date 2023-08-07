@@ -1,20 +1,33 @@
-let submitButton = document.getElementById("access_key_button");
+let submitButton = document.getElementById("accessKeyButton");
 let accessKeyTextBox = document.getElementById("accessKeyTextBox");
+let responseBox = document.getElementById("responseBox");
 
 const submitFunction = () => {
 	const params = {
 		access_key: accessKeyTextBox.value,
-		query: 'New York'
+		query: 'Tehran'
 	}
 
 	axios.get('http://api.weatherstack.com/current', { params })
 		.then(response => {
 			const apiResponse = response.data;
-			console.log(`Current temperature in ${apiResponse.location.name} is ${apiResponse.current.temperature}`);
+			if(apiResponse.success === false){
+				responseBox.innerHTML = "Checkout your access key.";
+				return;
+			}
+			responseBox.innerHTML = `Current temperature in ${apiResponse.location.name} is ${apiResponse.current.temperature}`;
 		})
 		.catch(error => {
 			console.log(error);
 		});
 }
 
+const keyPressFunction = (event) => {
+	if(event.key === "Enter")
+	{
+		submitFunction();
+	}
+}
+
 submitButton.addEventListener('click', submitFunction);
+accessKeyTextBox.addEventListener('keypress', keyPressFunction);
