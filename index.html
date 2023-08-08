@@ -5,19 +5,26 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./resources/style/style.css">
 	<title>WeatherStack Example</title>
 </head>
 
 <body>
-	<form action="javascript:void(0);" method="">
+
+	<header>
+		<nav></nav>
+		<h1>Weatherstack API</h1>
+	</header>
+	<main>
 		<label for="key">Please enter your personal key </label>
 		<input id="accessKeyTextBox" type="password" type="text" name="access_key" value="" id="key" maxlength="100" required>
-	</form>
-	<button id="accessKeyButton">Submit</button>
-	<br>
-	<p id="responseBox"></p>
-	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-	<script src="./resources/script/main.js" defer></script>
+		<button id="accessKeyButton">Submit</button>
+		<br>
+		<p id="responseBox"></p>
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+		<script src="./resources/script/main.js" defer></script>
+	</main>
+	<footer></footer>
 </body>
 
 </html>

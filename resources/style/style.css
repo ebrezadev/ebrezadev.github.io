@@ -1,0 +1,27 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	margin: 20px;
+	text-align: center;
+	font-family: Helvetica, sans-serif;
+}
+
+header h1{
+	margin: 0 auto;
+	width: 400px;
+}
+
+#accessKeyTextBox{
+	border-radius: 10px;
+	overflow: visible !important;
+	visibility: inherit;
+}
+
+#accessKeyButton:hover{
+	cursor:pointer;
+}
+
