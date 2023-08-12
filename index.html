@@ -11,24 +11,29 @@
 
 <body>
 
-	<header>
-		<nav></nav>
-		<h1>Weatherstack API</h1>
+	<header id="headerGrid">
+		<section id="mainTitle">
+			Real-Time Weather Data
+		</section>
+		<section id="subTitle">
+			powered by <br>
+			<a href="https://weatherstack.com/" target="_blank">
+				<img src="./resources/img/weatherstack_logo_white.png" alt="weatherstack logo">
+			</a>
+		</section>
 	</header>
 
 	<main>
 		<section id="contentGrid">
-
+			<p id="responseBox"></p>
 		</section>
+	</main>
+
+	<footer>
 		<label for="key">Please enter your personal key </label>
 		<input id="accessKeyTextBox" type="password" type="text" name="access_key" value="" id="key" maxlength="100"
 			required>
 		<button id="accessKeyButton">Submit</button>
-		<p id="responseBox"></p>
-	</main>
-
-	<footer>
-
 	</footer>
 
 	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
