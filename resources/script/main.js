@@ -1,4 +1,4 @@
-let submitButton = document.getElementById("accessKeyButton");
+let accessKeyButton = document.getElementById("accessKeyButton");
 let accessKeyTextBox = document.getElementById("accessKeyTextBox");
 let responseBox = document.getElementById("responseBox");
 
@@ -28,6 +28,6 @@ const keyPressFunction = (event) => {
 		submitFunction();
 	}
 }
-
-submitButton.addEventListener('click', submitFunction);
-accessKeyTextBox.addEventListener('keypress', keyPressFunction);
+console.log("inside main");
+accessKeyButton.addEventListener('click', submitFunction, false);
+accessKeyTextBox.addEventListener('keypress', keyPressFunction, false);

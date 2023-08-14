@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, , maximum-scale=1.0, user-scalable=no">
 	<link rel="stylesheet" href="./resources/style/style.css">
 	<title>WeatherStack Example</title>
 </head>
@@ -30,14 +30,18 @@
 	</main>
 
 	<footer>
-		<label for="key">Please enter your personal key </label>
-		<input id="accessKeyTextBox" type="password" type="text" name="access_key" value="" id="key" maxlength="100"
-			required>
-		<button id="accessKeyButton">Submit</button>
+		<section id="inputContainer">
+			<label id="accessKeyTextBoxLabel" for="key">Your personal key </label>
+			<input id="accessKeyTextBox" type="password" type="text" name="access_key" value=""
+				id="key" maxlength="100" required>
+		</section>
+		<button id="accessKeyButton">OK</button>
 	</footer>
 
 	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-	<script src="./resources/script/main.js" defer></script>
+	<script src="./resources/script/style.js"></script>
+	<script src="./resources/script/main.js"></script>
+	
 </body>
 
 </html>
